@@ -469,7 +469,7 @@ class StoryViewState extends State<StoryView> with TickerProviderStateMixin {
 
         case PlaybackState.pause:
           _holdNext(); // then pause animation
-          // this._animationController?.stop(canceled: false);
+          this._animationController?.stop(canceled: false);
           break;
 
         case PlaybackState.next:
