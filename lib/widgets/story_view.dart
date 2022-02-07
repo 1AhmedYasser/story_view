@@ -468,8 +468,8 @@ class StoryViewState extends State<StoryView> with TickerProviderStateMixin {
           break;
 
         case PlaybackState.pause:
-          _holdNext(); // then pause animation
-          this._animationController?.stop(canceled: false);
+          // _holdNext(); // then pause animation
+          // this._animationController?.stop(canceled: false);
           break;
 
         case PlaybackState.next:
@@ -648,7 +648,7 @@ class StoryViewState extends State<StoryView> with TickerProviderStateMixin {
               heightFactor: 1,
               child: GestureDetector(
                 onTapDown: (details) {
-                  // widget.controller.pause();
+                  widget.controller.pause();
                 },
                 onTapCancel: () {
                   widget.controller.play();
@@ -664,7 +664,7 @@ class StoryViewState extends State<StoryView> with TickerProviderStateMixin {
                 onVerticalDragStart: widget.onVerticalSwipeComplete == null
                     ? null
                     : (details) {
-                        //widget.controller.pause();
+                        widget.controller.pause();
                       },
                 onVerticalDragCancel: widget.onVerticalSwipeComplete == null
                     ? null
