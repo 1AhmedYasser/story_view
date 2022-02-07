@@ -473,13 +473,13 @@ class StoryViewState extends State<StoryView> with TickerProviderStateMixin {
           break;
 
         case PlaybackState.next:
-          // _removeNextHold();
-          // _goForward();
+          _removeNextHold();
+          _goForward();
           break;
 
         case PlaybackState.previous:
-          // _removeNextHold();
-          // _goBack();
+          _removeNextHold();
+          _goBack();
           break;
       }
     });
