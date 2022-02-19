@@ -468,8 +468,8 @@ class StoryViewState extends State<StoryView> with TickerProviderStateMixin {
           break;
 
         case PlaybackState.pause:
-          _holdNext(); // then pause animation
-          this._animationController?.stop(canceled: false);
+          // _holdNext(); // then pause animation
+          // this._animationController?.stop(canceled: false);
           break;
 
         case PlaybackState.next:
@@ -522,7 +522,7 @@ class StoryViewState extends State<StoryView> with TickerProviderStateMixin {
       if (status == AnimationStatus.completed) {
         storyItem.shown = true;
         if (widget.storyItems.last != storyItem) {
-          // _beginPlay();
+          _beginPlay();
         } else {
           // done playing
           _onComplete();
